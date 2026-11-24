@@ -1,0 +1,21 @@
+@use '../../../styles/variables' as v;
+
+.inicio {
+  padding: v.$sp-4;
+
+  @media (min-width: v.$bp-movil) {
+    padding: v.$sp-6;
+  }
+
+  @media (min-width: v.$bp-tablet) {
+    padding: v.$sp-8;
+  }
+
+  @media (min-width: v.$bp-desktop) {
+    padding: v.$sp-8;
+  }
+
+  &__titulo {
+    font-family: v.$fuente-titulos;
+  }
+}

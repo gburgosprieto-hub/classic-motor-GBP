@@ -1,0 +1,17 @@
+<header class="cabecera">
+  <nav class="cabecera__navegacion" aria-label="Navegación principal">
+    <a class="cabecera__enlace" routerLink="/inicio" routerLinkActive="cabecera__enlace--activo">Inicio</a>
+    <a class="cabecera__enlace" routerLink="/catalogo" routerLinkActive="cabecera__enlace--activo">Catálogo</a>
+    <a class="cabecera__enlace" routerLink="/itinerario" routerLinkActive="cabecera__enlace--activo">Itinerario</a>
+    <a class="cabecera__enlace" routerLink="/inscripcion" routerLinkActive="cabecera__enlace--activo">Inscripción</a>
+    <a class="cabecera__enlace" routerLink="/guia-estilo" routerLinkActive="cabecera__enlace--activo">Guía de estilo</a>
+  </nav>
+</header>
+
+<main class="contenido-principal">
+  <router-outlet />
+</main>
+
+<footer class="pie">
+  <p class="pie__texto">Rally Classic Motor Club</p>
+</footer>
