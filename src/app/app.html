@@ -1,5 +1,20 @@
 <header class="cabecera">
-  <nav class="cabecera__navegacion" aria-label="Navegación principal">
+  <button
+    class="cabecera__boton"
+    type="button"
+    aria-controls="menu-principal"
+    [attr.aria-expanded]="menuAbierto()"
+    (click)="alternarMenu()"
+  >
+    Menú
+  </button>
+
+  <nav
+    class="cabecera__nav"
+    id="menu-principal"
+    aria-label="Navegación principal"
+    [class.cabecera__nav--abierto]="menuAbierto()"
+  >
     <a class="cabecera__enlace" routerLink="/inicio" routerLinkActive="cabecera__enlace--activo">Inicio</a>
     <a class="cabecera__enlace" routerLink="/catalogo" routerLinkActive="cabecera__enlace--activo">Catálogo</a>
     <a class="cabecera__enlace" routerLink="/itinerario" routerLinkActive="cabecera__enlace--activo">Itinerario</a>
@@ -13,5 +28,5 @@
 </main>
 
 <footer class="pie">
-  <p class="pie__texto">Rally Classic Motor Club</p>
+  <p class="pie__texto">Rally Classic Motor Club 2</p>
 </footer>

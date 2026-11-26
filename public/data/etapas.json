@@ -1,0 +1,42 @@
+[
+  {
+    "id": 1,
+    "hora": "08:00",
+    "titulo": "Recepción y verificaciones",
+    "lugar": "Plaza Mayor de Torrelaguna",
+    "descripcion": "Acreditación de participantes y revisión básica de los vehículos.",
+    "distanciaKm": 0
+  },
+  {
+    "id": 2,
+    "hora": "09:30",
+    "titulo": "Salida oficial",
+    "lugar": "Torrelaguna",
+    "descripcion": "Salida escalonada de los vehículos participantes.",
+    "distanciaKm": 0
+  },
+  {
+    "id": 3,
+    "hora": "11:00",
+    "titulo": "Control de paso",
+    "lugar": "Puerto de Canencia",
+    "descripcion": "Primera parada de control y reagrupamiento de la caravana.",
+    "distanciaKm": 42
+  },
+  {
+    "id": 4,
+    "hora": "13:00",
+    "titulo": "Exposición y almuerzo",
+    "lugar": "Miraflores de la Sierra",
+    "descripcion": "Exposición de los coches y descanso de los participantes.",
+    "distanciaKm": 28
+  },
+  {
+    "id": 5,
+    "hora": "17:00",
+    "titulo": "Llegada y entrega de premios",
+    "lugar": "Plaza Mayor de Torrelaguna",
+    "descripcion": "Llegada final, agradecimientos y entrega de reconocimientos.",
+    "distanciaKm": 48
+  }
+]

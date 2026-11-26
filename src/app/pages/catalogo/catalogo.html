@@ -1,1 +1,26 @@
-<section class="catalogo"><h1 class="catalogo__titulo">Catálogo de vehículos</h1></section>
+<section class="catalogo">
+  <h1 class="catalogo__titulo">Catálogo de vehículos</h1>
+
+  @if (vehiculos().length === 0) {
+    <p class="catalogo__mensaje">Cargando vehículos...</p>
+  } @else {
+    <p class="catalogo__total">Vehículos participantes: {{ vehiculos().length }}</p>
+
+    <div class="catalogo__rejilla">
+      @for (vehiculo of vehiculos(); track vehiculo.id) {
+        <article class="catalogo__tarjeta">
+          <img class="catalogo__imagen" [src]="vehiculo.imagen" [alt]="vehiculo.alt" />
+
+          <div class="catalogo__contenido">
+            <h2 class="catalogo__nombre">{{ vehiculo.marca }} {{ vehiculo.modelo }}</h2>
+            <p class="catalogo__dato">Año: {{ vehiculo.anio }}</p>
+            <p class="catalogo__dato">Categoría: {{ vehiculo.categoria }}</p>
+            <p class="catalogo__dato">Potencia: {{ vehiculo.potenciaCv }} CV</p>
+            <p class="catalogo__descripcion">{{ vehiculo.descripcion }}</p>
+            <p class="catalogo__historial">{{ vehiculo.historial }}</p>
+          </div>
+        </article>
+      }
+    </div>
+  }
+</section>

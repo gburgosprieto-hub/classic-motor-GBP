@@ -1,1 +1,63 @@
-<section class="guia-estilo"><h1 class="guia-estilo__titulo">Guía de estilo</h1></section>
+<section class="guia-estilo guia-estilo__introduccion">
+  <h1 class="guia-estilo__titulo">Guía de estilo</h1>
+  <p class="guia-estilo__descripcion">Sistema visual del Rally Classic Motor.</p>
+</section>
+
+<section class="guia-estilo guia-estilo__seccion" aria-labelledby="titulo-paleta">
+  <h2 class="guia-estilo__subtitulo" id="titulo-paleta">Paleta de colores</h2>
+  <div class="guia-estilo__paleta">
+    @for (color of colores; track color.nombre) {
+      <article class="guia-estilo__muestra-color">
+        <div class="guia-estilo__color" [class]="color.clase"></div>
+        <h3 class="guia-estilo__nombre-color">{{ color.nombre }}</h3>
+        <p class="guia-estilo__valor-color">{{ color.valor }}</p>
+      </article>
+    }
+  </div>
+</section>
+
+<section class="guia-estilo guia-estilo__seccion" aria-labelledby="titulo-tipografia">
+  <h2 class="guia-estilo__subtitulo" id="titulo-tipografia">Escala tipográfica</h2>
+  <p class="guia-estilo__tipo guia-estilo__tipo--h1">H1 · Título principal</p>
+  <p class="guia-estilo__tipo guia-estilo__tipo--h2">H2 · Título de sección</p>
+  <p class="guia-estilo__tipo guia-estilo__tipo--h3">H3 · Título de bloque</p>
+  <p class="guia-estilo__tipo guia-estilo__tipo--h4">H4 · Título pequeño</p>
+  <p class="guia-estilo__tipo guia-estilo__tipo--parrafo">Párrafo · Texto general de la web</p>
+  <p class="guia-estilo__tipo guia-estilo__tipo--pequeno">Texto pequeño · Información secundaria</p>
+</section>
+
+<section class="guia-estilo guia-estilo__seccion" aria-labelledby="titulo-botones">
+  <h2 class="guia-estilo__subtitulo" id="titulo-botones">Botones</h2>
+  <div class="guia-estilo__botones">
+    @for (variante of variantesBoton; track variante) {
+      <article class="guia-estilo__grupo-botones">
+        <h3 class="guia-estilo__nombre-variante">Variante {{ variante }}</h3>
+        @for (muestra of estadosBoton; track muestra.nombre) {
+          <app-boton
+            [variante]="variante"
+            [estado]="muestra.estado"
+            [deshabilitado]="muestra.deshabilitado"
+          >
+            {{ muestra.nombre }}
+          </app-boton>
+        }
+      </article>
+    }
+  </div>
+</section>
+
+<section class="guia-estilo guia-estilo__seccion" aria-labelledby="titulo-componentes">
+  <h2 class="guia-estilo__subtitulo" id="titulo-componentes">Componentes base</h2>
+  <div class="guia-estilo__componentes">
+    <article class="tarjeta">
+      <h3 class="tarjeta__titulo">Vehículo clásico</h3>
+      <p class="tarjeta__texto">Ejemplo de tarjeta para presentar información del catálogo.</p>
+      <a class="tarjeta__enlace" href="#titulo-componentes">Ver ejemplo</a>
+    </article>
+
+    <div class="campo">
+      <label class="campo__label" for="nombre-ejemplo">Nombre del participante</label>
+      <input class="campo__control" id="nombre-ejemplo" type="text" placeholder="Escribe tu nombre" />
+    </div>
+  </div>
+</section>

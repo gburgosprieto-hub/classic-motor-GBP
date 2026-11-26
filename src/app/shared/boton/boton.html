@@ -1,0 +1,13 @@
+<button
+  class="boton"
+  type="button"
+  [class.boton--primario]="variante() === 'primario'"
+  [class.boton--secundario]="variante() === 'secundario'"
+  [class.boton--fantasma]="variante() === 'fantasma'"
+  [class.boton--hover]="estado() === 'hover'"
+  [class.boton--foco]="estado() === 'foco'"
+  [class.boton--activo]="estado() === 'activo'"
+  [disabled]="deshabilitado()"
+>
+  <ng-content />
+</button>

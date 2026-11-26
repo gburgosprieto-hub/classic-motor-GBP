@@ -1,0 +1,76 @@
+@use '../../../styles/variables' as v;
+
+.boton {
+  padding: v.$sp-3 v.$sp-5;
+  border: v.$borde-fino solid transparent;
+  border-radius: v.$radio-medio;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color v.$transicion-rapida;
+
+  &--primario {
+    background-color: v.$verde-carreras;
+    color: v.$crema;
+  }
+
+  &--primario:hover,
+  &--primario.boton--hover {
+    background-color: v.$burdeos;
+  }
+
+  &--primario:active,
+  &--primario.boton--activo {
+    background-color: v.$carbon;
+  }
+
+  &--secundario {
+    background-color: v.$burdeos;
+    color: v.$crema;
+  }
+
+  &--secundario:hover,
+  &--secundario.boton--hover {
+    background-color: v.$cuero;
+  }
+
+  &--secundario:active,
+  &--secundario.boton--activo {
+    background-color: v.$carbon;
+  }
+
+  &--fantasma {
+    border-color: v.$verde-carreras;
+    background-color: transparent;
+    color: v.$verde-carreras;
+  }
+
+  &--fantasma:hover,
+  &--fantasma.boton--hover {
+    background-color: v.$cromo;
+  }
+
+  &--fantasma:active,
+  &--fantasma.boton--activo {
+    background-color: v.$cuero;
+    color: v.$crema;
+  }
+
+  &:focus-visible,
+  &--foco {
+    outline: v.$ancho-foco solid v.$cuero;
+    outline-offset: v.$sp-1;
+  }
+
+  &:active,
+  &--activo {
+    transform: translateY(v.$desplazamiento-activo);
+  }
+
+  &:disabled {
+    border-color: v.$cromo;
+    background-color: v.$cromo;
+    color: v.$carbon;
+    cursor: not-allowed;
+    opacity: v.$opacidad-deshabilitado;
+  }
+}

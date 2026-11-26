@@ -1,6 +1,8 @@
 @use 'variables' as v;
 
-* {
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -9,9 +11,33 @@ body {
   background-color: v.$crema;
   color: v.$carbon;
   font-family: v.$fuente-texto;
+  font-size: v.$fs-base;
+  line-height: 1.5;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  margin-top: 0;
+  font-family: v.$fuente-titulos;
+}
+
+a {
+  color: v.$verde-carreras;
+  text-decoration-thickness: v.$borde-fino;
+}
+
+a:hover {
+  color: v.$burdeos;
+}
+
+button,
+input {
+  font: inherit;
 }
 
 :focus-visible {
-  outline: 0.2rem solid v.$burdeos;
-  outline-offset: 0.2rem;
+  outline: v.$ancho-foco solid v.$cuero;
+  outline-offset: v.$sp-1;
 }

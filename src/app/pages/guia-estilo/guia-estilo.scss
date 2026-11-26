@@ -1,2 +1,190 @@
 @use '../../../styles/variables' as v;
-.guia-estilo { padding: v.$sp-4; }
+@use '../../../styles/mixins' as m;
+
+.guia-estilo {
+  padding: v.$sp-4;
+
+  @include m.desde-movil {
+    padding: v.$sp-5;
+  }
+
+  @include m.desde-tablet {
+    padding: v.$sp-8;
+  }
+}
+
+.guia-estilo__introduccion {
+  background-color: v.$verde-carreras;
+  color: v.$crema;
+}
+
+.guia-estilo__titulo {
+  margin-bottom: v.$sp-2;
+  font-size: v.$fs-xxxl;
+}
+
+.guia-estilo__descripcion,
+.guia-estilo__valor-color {
+  margin: 0;
+}
+
+.guia-estilo__seccion {
+  border-bottom: v.$borde-fino solid v.$cromo;
+}
+
+.guia-estilo__paleta {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$sp-4;
+
+  @include m.desde-movil {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.desde-tablet {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  @include m.desde-escritorio {
+    grid-template-columns: repeat(6, 1fr);
+  }
+}
+
+.guia-estilo__muestra-color {
+  overflow: hidden;
+  border-radius: v.$radio-medio;
+  background-color: v.$crema;
+  box-shadow: v.$sombra-suave;
+}
+
+.guia-estilo__color {
+  height: v.$alto-muestra-color;
+
+  &--verde {
+    background-color: v.$verde-carreras;
+  }
+
+  &--burdeos {
+    background-color: v.$burdeos;
+  }
+
+  &--cuero {
+    background-color: v.$cuero;
+  }
+
+  &--cromo {
+    background-color: v.$cromo;
+  }
+
+  &--crema {
+    border: v.$borde-fino solid v.$cromo;
+    background-color: v.$crema;
+  }
+
+  &--carbon {
+    background-color: v.$carbon;
+  }
+}
+
+.guia-estilo__nombre-color,
+.guia-estilo__valor-color {
+  padding: v.$sp-2 v.$sp-3;
+}
+
+.guia-estilo__nombre-color {
+  margin: 0;
+  font-size: v.$fs-base;
+}
+
+.guia-estilo__tipo {
+  margin: v.$sp-3 0;
+
+  &--h1 {
+    font-family: v.$fuente-titulos;
+    font-size: v.$fs-xxxl;
+  }
+
+  &--h2 {
+    font-family: v.$fuente-titulos;
+    font-size: v.$fs-xxl;
+  }
+
+  &--h3 {
+    font-family: v.$fuente-titulos;
+    font-size: v.$fs-xl;
+  }
+
+  &--h4 {
+    font-family: v.$fuente-titulos;
+    font-size: v.$fs-lg;
+  }
+
+  &--parrafo {
+    font-size: v.$fs-base;
+  }
+
+  &--pequeno {
+    font-size: v.$fs-sm;
+  }
+}
+
+.guia-estilo__botones,
+.guia-estilo__componentes {
+  display: grid;
+  gap: v.$sp-6;
+
+  @include m.desde-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+.guia-estilo__botones {
+  @include m.desde-escritorio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.guia-estilo__grupo-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: v.$sp-3;
+}
+
+.guia-estilo__nombre-variante {
+  text-transform: capitalize;
+}
+
+.tarjeta {
+  padding: v.$sp-6;
+  border-radius: v.$radio-medio;
+  background-color: v.$crema;
+  box-shadow: v.$sombra-media;
+}
+
+.tarjeta__titulo {
+  color: v.$verde-carreras;
+}
+
+.tarjeta__enlace {
+  font-weight: bold;
+}
+
+.campo {
+  display: flex;
+  flex-direction: column;
+  gap: v.$sp-2;
+}
+
+.campo__label {
+  font-weight: bold;
+}
+
+.campo__control {
+  width: 100%;
+  padding: v.$sp-3;
+  border: v.$borde-fino solid v.$carbon;
+  border-radius: v.$radio-pequeno;
+  background-color: v.$crema;
+  color: v.$carbon;
+}

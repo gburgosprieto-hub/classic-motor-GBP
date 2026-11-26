@@ -1,2 +1,72 @@
 @use '../../../styles/variables' as v;
-.catalogo { padding: v.$sp-4; }
+@use '../../../styles/mixins' as m;
+
+.catalogo {
+  padding: v.$sp-4;
+
+  @include m.desde-movil {
+    padding: v.$sp-5;
+  }
+
+  @include m.desde-tablet {
+    padding: v.$sp-8;
+  }
+}
+
+.catalogo__total,
+.catalogo__mensaje {
+  margin-bottom: v.$sp-6;
+}
+
+.catalogo__rejilla {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: v.$sp-6;
+
+  @include m.desde-tablet {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include m.desde-escritorio {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+.catalogo__tarjeta {
+  overflow: hidden;
+  border-radius: v.$radio-medio;
+  background-color: v.$crema;
+  box-shadow: v.$sombra-media;
+}
+
+.catalogo__imagen {
+  display: block;
+  width: 100%;
+  height: v.$alto-imagen-tarjeta;
+  object-fit: cover;
+}
+
+.catalogo__contenido {
+  padding: v.$sp-5;
+}
+
+.catalogo__nombre {
+  color: v.$verde-carreras;
+  font-size: v.$fs-xl;
+}
+
+.catalogo__dato {
+  margin: v.$sp-1 0;
+  font-weight: bold;
+}
+
+.catalogo__descripcion,
+.catalogo__historial {
+  margin-bottom: 0;
+}
+
+.catalogo__historial {
+  padding-top: v.$sp-3;
+  border-top: v.$borde-fino solid v.$cromo;
+  font-size: v.$fs-sm;
+}

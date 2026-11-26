@@ -1,0 +1,76 @@
+@use '../styles/variables' as v;
+@use '../styles/mixins' as m;
+
+.cabecera {
+  padding: v.$sp-4;
+  background-color: v.$verde-carreras;
+
+  @include m.desde-movil {
+    padding: v.$sp-5;
+  }
+
+  @include m.desde-escritorio {
+    padding: v.$sp-6;
+  }
+}
+
+.cabecera__boton {
+  padding: v.$sp-2 v.$sp-4;
+  border: v.$borde-fino solid v.$crema;
+  border-radius: v.$radio-pequeno;
+  background-color: v.$crema;
+  color: v.$verde-carreras;
+  cursor: pointer;
+
+  @include m.desde-tablet {
+    display: none;
+  }
+}
+
+.cabecera__nav {
+  display: none;
+  flex-direction: column;
+  gap: v.$sp-2;
+  margin-top: v.$sp-4;
+
+  &--abierto {
+    display: flex;
+  }
+
+  @include m.desde-tablet {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-top: 0;
+  }
+}
+
+.cabecera__enlace {
+  padding: v.$sp-2 v.$sp-3;
+  border-radius: v.$radio-pequeno;
+  color: v.$crema;
+  text-decoration: none;
+
+  &:hover,
+  &--activo {
+    background-color: v.$crema;
+    color: v.$verde-carreras;
+  }
+}
+
+.contenido-principal {
+  width: 100%;
+  max-width: v.$ancho-maximo;
+  margin: 0 auto;
+}
+
+.pie {
+  padding: v.$sp-4;
+  background-color: v.$carbon;
+  color: v.$crema;
+  text-align: center;
+}
+
+.pie__texto {
+  margin: 0;
+}

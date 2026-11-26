@@ -1,0 +1,20 @@
+@use 'variables' as v;
+
+// Los mixins evitan repetir las media queries en cada componente.
+@mixin desde-movil {
+  @media (min-width: v.$bp-movil) {
+    @content;
+  }
+}
+
+@mixin desde-tablet {
+  @media (min-width: v.$bp-tablet) {
+    @content;
+  }
+}
+
+@mixin desde-escritorio {
+  @media (min-width: v.$bp-desktop) {
+    @content;
+  }
+}

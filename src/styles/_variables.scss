@@ -1,3 +1,4 @@
+// Paleta principal del proyecto.
 $verde-carreras: #004225;
 $burdeos: #5e1224;
 $cuero: #8b5a2b;
@@ -5,14 +6,43 @@ $cromo: #c9ced6;
 $crema: #f4eedf;
 $carbon: #1e1b18;
 
-$fuente-titulos: Georgia, serif;
-$fuente-texto: Arial, sans-serif;
+// Tipografías con alternativas por si no se carga la fuente principal.
+$fuente-titulos: 'Playfair Display', Georgia, serif;
+$fuente-texto: 'Source Sans 3', Arial, sans-serif;
 
+$fs-xs: 0.75rem;
+$fs-sm: 0.875rem;
+$fs-base: 1rem;
+$fs-lg: 1.25rem;
+$fs-xl: 1.5rem;
+$fs-xxl: 2rem;
+$fs-xxxl: 2.5rem;
+
+// Escala de espacios basada en múltiplos de 0.25rem.
+$sp-1: 0.25rem;
 $sp-2: 0.5rem;
+$sp-3: 0.75rem;
 $sp-4: 1rem;
+$sp-5: 1.25rem;
 $sp-6: 1.5rem;
+$sp-7: 1.75rem;
 $sp-8: 2rem;
 
 $bp-movil: 375px;
 $bp-tablet: 768px;
 $bp-desktop: 1440px;
+
+$radio-pequeno: 0.25rem;
+$radio-medio: 0.5rem;
+$radio-grande: 1rem;
+$sombra-suave: 0 0.125rem 0.5rem rgba($carbon, 0.15);
+$sombra-media: 0 0.25rem 0.75rem rgba($carbon, 0.2);
+
+$borde-fino: 1px;
+$ancho-foco: 3px;
+$ancho-maximo: 75rem;
+$alto-muestra-color: 6rem;
+$alto-imagen-tarjeta: 12rem;
+$opacidad-deshabilitado: 0.6;
+$transicion-rapida: 0.2s ease;
+$desplazamiento-activo: 2px;
